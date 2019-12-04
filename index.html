@@ -4,19 +4,29 @@
   <meta charset="UTF-8">
   <title>A Pen by  Julia Bowman</title>
   <link rel="stylesheet" href="./style.css">
-
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <div>
   <div>
-    <h1> $ </h1>
-  <h1 id='bankText'>$0 </h1> 
+    <h1> $ <span id='bankText'>0 </span> </h1>
+  
   </div>
 <a href="https://imgbb.com/"><img id="wheel"src="https://i.ibb.co/dQHDTP3/45456.png" alt="45456" border="0"></a>
 </div>
 <div class="bottom">
 	<button id="spin-btn">$20,000</button>
+</div>
+<button id="Cash-out">Cash out</button>
+<button id="myBtn">Cash out</button>
+<div id="myModal" class="modal"></div>
+<div class="modal-content">
+    <span class="close">&times;</span>
+    <p>You Win!</p>
+  </div>
+
+</div>
+
 </div>
 <!-- partial -->
 <script  src="js/jquery.min.js"></script>
