@@ -1,12 +1,7 @@
 #wheel {
 padding: 90px;
 position: center;
-/**animation-name: spin;
-
-animation-iteration-count: infinite;
-animation-timing-function: linear; 
- }**/
-  transition: all 5s forwards;
+transition: all 5s forwards;
 }
  @keyframes spin {
     from {
@@ -61,6 +56,26 @@ h1 {
   font-size: 28px;
   font-weight: bold;
 }
+#Reset{
+display: block;
+width: 20%;
+border: none;
+background-color: #9C0B0B;
+padding: 14px 15px;
+font-size: 30px;
+cursor: pointer;
+text-align: center;
+opacity: 0.6;
+transition: 0.3s;
+border-radius: 5px;
+}
+#Reset:hover {opacity: 1}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
 
 .close:hover,
 .close:focus {
@@ -69,28 +84,24 @@ h1 {
   cursor: pointer;
 }
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
 }
-
-/* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto; 
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%; 
 }
-
-/* The Close Button */
 .close {
   color: #aaa;
   float: right;

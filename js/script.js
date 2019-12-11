@@ -12,23 +12,28 @@ var multiply ={
       x5: [316,360]
   }
 }
-var bank = 60000
+var bank = 100000
 var bankText = $('#bankText')
 bankText.text(bank)
 
+var reset =$("#Reset")
+var modal =$(".modal")
+var cashOutBtn =$("#Cash-out")
+var modalText =$("#modal-text")
+var close = $('.close')
 
- var wheel = $("#wheel")
- var button  = $("#spin-btn")
+var wheel = $("#wheel")
+var button  = $("#spin-btn")
 button.click(function(e){
+
   var rando =Math.floor(Math.random() *360)
     wheel.css('transform' , 'rotate('+rando+'deg)')
 
   if (rando > 0 && rando <=45){
-    console.log('Add x2')
+
   bank = bank + (20000 * 2)
   bankText.text(bank)
- 
-  }
+ }
   else if ( rando >45 && rando <=90){
    bank = bank -(20000 * 2)
    bankText.text(bank)
@@ -57,6 +62,26 @@ button.click(function(e){
   bank = bank -(20000 * 5)
   bankText.text(bank)
   }
+  if (bank <= 0 ){
+    modalText.text("You Lose")
+    modal.css ('display','block')
+    wheel.css('transform' , 'rotate(0deg)')
+    bankText.text(100000)
+  }
 });
 
+reset.click(function(){
+  wheel.css('transform' , 'rotate(0deg)')
+  bankText.text(100000)
+})
+
+cashOutBtn.click(function(){
+ modalText.text("You Won       " + (bank))
+  modal.css ('display','block')
+  wheel.css('transform' , 'rotate(0deg)')
+  bankText.text(20000)
+})
+close.click(function(){
+  modal.css('display', 'none')
+})
 
